@@ -1,0 +1,25 @@
+[build]
+  # Directory to change to before starting a build
+  base = "."
+
+  # Directory that contains the deploy-ready HTML files and assets
+  publish = "dist"
+
+  # Default build command
+  command = "npm run build"
+
+# Redirects and headers
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  # Define which paths this specific header will apply to
+  for = "/*"
+    [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Environment variables
+[context.production.environment]
+  NODE_VERSION = "16"
