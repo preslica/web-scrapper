@@ -231,7 +231,6 @@ ${metaTags}
       sectionHtml += `                    <div class="form__group">\n`;
       sectionHtml += `                        <label class="form__label" for="message">Message</label>\n`;
       sectionHtml += `                        <textarea class="form__control" id="message" rows="5" placeholder="Your Message"></textarea>\n`;
-      section
 
   /**
    * Create a README.md file for the project
